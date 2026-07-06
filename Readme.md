@@ -71,3 +71,23 @@ python manage.py startapp blog
 python manage.py runserver
 ```
 Visit `http://127.0.0` in any browser to confirm execution.
+
+
+
+Why does Django separate them?
+
+Django separates concerns to follow the core software engineering philosophy of high cohesion and loose coupling.
+
+A Project is a complete website configuration. It represents the global infrastructure (the database connections, routing configurations, and security configurations).
+
+An App is an isolated, self-sufficient package that performs exactly one specific function (e.g., a blogging engine, a payment system, or a contact form).
+
+What are the benefits?
+
+Plug-and-Play Reusability: You can extract a well-written "blog" app out of an old project and drop it into a completely new project without rewiring global settings.
+
+Team Collaboration: Multiple developers can work simultaneously on the same website without stepping on each other's toes. 
+
+One developer can build out features inside the payments app while another refines the forum app.
+
+Organised Code Base: Codebases stay compact and searchable. Instead of navigating a giant file with thousands of lines of models, logic is split into logical folders.
